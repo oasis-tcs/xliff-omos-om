@@ -8,7 +8,7 @@
 <div>
 <h3>Description</h3>
 
-<p>The purpose of this repository is to support development of a JSON serialization of the XLIFF Abstract Object Model, as managed by members of the OASIS XLIFF OMOS TC.</p>
+<p>The purpose of this repository is to support development on an Object Model for XLIFF Versions 2.0 and higher, under management of the OASIS XLIFF OMOS TC.</p>
 </div>
 
 <div>
