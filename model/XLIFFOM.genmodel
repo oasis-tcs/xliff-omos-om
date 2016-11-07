@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/XLIFFOM/src" modelPluginID="XLIFFOM" modelName="XLIFFOM"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="IGNORE"/>
+    <details key="ANNOTATION_DETAILS" value="IGNORE"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="IGNORE"/>
+    <details key="COMMENTS" value="IGNORE"/>
+    <details key="DERIVED_FEATURES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="IGNORE"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="IGNORE"/>
+    <details key="REDEFINING_OPERATIONS" value="IGNORE"/>
+    <details key="INVARIANT_CONSTRAINTS" value="IGNORE"/>
+    <details key="UNION_PROPERTIES" value="IGNORE"/>
+    <details key="DUPLICATE_OPERATIONS" value="IGNORE"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="IGNORE"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="IGNORE"/>
+    <details key="UNTYPED_PROPERTIES" value="IGNORE"/>
+    <details key="REDEFINING_PROPERTIES" value="IGNORE"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>file:/C:/Users/filipd/git/XLIFFOM2/model/XLIFFOM.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="RootElement" disposableProviderFactory="true"
+      ecorePackage="RootElement.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//LIFFDocument">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//LIFFDocument/srcLang"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//LIFFDocument/trgLang"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//LIFFDocument/version"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference RootElement.ecore#//LIFFDocument/file"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//LIFFDocument/_moduleorextensionattributes"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//file">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RootElement.ecore#//file/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference RootElement.ecore#//file/datatype1"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference RootElement.ecore#//file/group"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//skeleton"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RootElement.ecore#//group"/>
+  </genPackages>
+</genmodel:GenModel>
