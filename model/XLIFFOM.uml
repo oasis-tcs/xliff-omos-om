@@ -120,10 +120,19 @@
   <packagedElement xmi:type="uml:Realization" xmi:id="__tZiUEg4EeaeJ7X3bvi0DQ" client="_xKg9IEg3EeaeJ7X3bvi0DQ" supplier="_ewVEUEg4EeaeJ7X3bvi0DQ"/>
   <packagedElement xmi:type="uml:DataType" xmi:id="_KUMh4Eg5EeaeJ7X3bvi0DQ" name="sc" isLeaf="true">
     <elementImport xmi:type="uml:ElementImport" xmi:id="_s4k78Eg5EeaeJ7X3bvi0DQ" importedElement="_ewVEUEg4EeaeJ7X3bvi0DQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_n7pkQMFhEeab9K6rhPeR1g" name="id" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_fFoJcEg5EeaeJ7X3bvi0DQ" name="Text" isLeaf="true">
     <elementImport xmi:type="uml:ElementImport" xmi:id="_v4j7IEg5EeaeJ7X3bvi0DQ" importedElement="_ewVEUEg4EeaeJ7X3bvi0DQ"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_j1qmUMFhEeab9K6rhPeR1g" name="ec">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__mgQAMFhEeab9K6rhPeR1g" name="startRef" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_j2dQgMFhEeab9K6rhPeR1g" client="_j1qmUMFhEeab9K6rhPeR1g" supplier="_ewVEUEg4EeaeJ7X3bvi0DQ"/>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ha-ikCgAEeaLaJ3Jz4-x4A">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ha_wsCgAEeaLaJ3Jz4-x4A" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
