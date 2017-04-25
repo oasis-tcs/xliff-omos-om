@@ -789,10 +789,9 @@
 <para>The LIFF OM postulates several possible root objects. The highest level object is <code>LIF</code>.
 </para>
 
-    <para>The <code>LIF</code> object corresponds to the root element of an <firstterm>XLIFF Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
-        targetptr="xliff"><code>&lt;xliff&gt;</code></olink>.
-      
-    </para>
+    <para>The <code>LIFF</code> object corresponds to the root element of an <firstterm>XLIFF
+        Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
+        targetptr="xliff"><code>&lt;xliff&gt;</code></olink>. </para>
     <para> WORK IN PROGRESS!!! THE FOLLOEING PARTS OF THE SPECIFICATION NEED RESTATED IN AN XML INDEPENDENT WAY
       
       It contains a collection of <olink
