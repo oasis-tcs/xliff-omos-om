@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1UqmoCf8Eea7nJWIREoHFg" name="LIFF" URI="">
-  <packagedElement xmi:type="uml:DataType" xmi:id="_5ewBcCf8Eea7nJWIREoHFg" name="LIFF Document">
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5ewBcCf8Eea7nJWIREoHFg" name="LIFF [primary root object]">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_tZqiUCglEeaKMP-ep1wpcg" name="srcLang" isDerived="true">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dbOjgDJIEeaXaYsaHtTzgA" value="1"/>
@@ -29,7 +29,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zP81gCf_EeaLaJ3Jz4-x4A" value="*"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:DataType" xmi:id="_viWiYCf_EeaLaJ3Jz4-x4A" name="file">
+  <packagedElement xmi:type="uml:DataType" xmi:id="_viWiYCf_EeaLaJ3Jz4-x4A" name="file [seconddary root object]">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_w8XFcCgDEeaLaJ3Jz4-x4A" name="id" isID="true">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X62dMDLiEeavfqxEi8MvRQ" value="1"/>
@@ -54,7 +54,7 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_QZLdYCgfEeayvKivPXh-Ng" name="file" type="_viWiYCf_EeaLaJ3Jz4-x4A" association="_QZHzACgfEeayvKivPXh-Ng"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:DataType" xmi:id="_bqs_gCggEeayvKivPXh-Ng" name="group">
+  <packagedElement xmi:type="uml:DataType" xmi:id="_bqs_gCggEeayvKivPXh-Ng" name="group [optionally recursive logical root object]">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_zNHzcDJREeaXaYsaHtTzgA" name="id" isID="true">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6gvLADJREeaXaYsaHtTzgA"/>
     </ownedAttribute>
@@ -70,7 +70,7 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_SJafgDLhEeavfqxEi8MvRQ" name="group" type="_bqs_gCggEeayvKivPXh-Ng" association="_SJRVkDLhEeavfqxEi8MvRQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:DataType" xmi:id="_5W36gDMCEeavsuLbsMJx2g" name="unit">
+  <packagedElement xmi:type="uml:DataType" xmi:id="_5W36gDMCEeavsuLbsMJx2g" name="unit [smallest independent fragment root object]">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_OVFWsEg0EeaeJ7X3bvi0DQ" name="sub-unit" type="_OSsxEEg0EeaeJ7X3bvi0DQ" association="_OVC6cEg0EeaeJ7X3bvi0DQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-KlRoOI8Eea0rYxxzDPXwg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-Ko8AOI8Eea0rYxxzDPXwg" value="*"/>
