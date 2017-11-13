@@ -193,9 +193,19 @@
     </legalnotice>
 
     <abstract>
-      <para>This document defines version &version; of the Localization Interchange Object Model based on the XLIFF 2 Family of Standards. The purpose of this Object Model is to provide a serialization independent definition of objects, their relationships and data models, so that Localization tools can exchange translation and localization task data in an interoperable way without mandating a specific serialization of the Object Model. Specific serialization and binding provisions are out of scope of this specification, albeit XLIFF (the original XML serialization), JLIFF (JSON Localization Interchange Fragment Format), and other hypothetical serializations examples are used to demonstrate the semantic and behavioral match between and among different serialization formats as facilitated by this Object Model.    
-        
-        The ultimate goal of this specification is to enable localization tools to pass localizable content including software strings from one step of the localization process to any other, while enabling interoperability between and among tools without enforcing a specific serialization.</para>
+      <para>This document defines version &version; of the Localization Interchange Object Model
+        (LIOM) based on the XLIFF 2 Family of Standards. The purpose of this Object Model is to
+        provide a serialization independent definition of objects, their relationships and data
+        models, so that Localization tools can exchange translation and localization task data in an
+        interoperable way without mandating a specific serialization of the Object Model. Specific
+        serialization and binding provisions are out of scope of this specification, albeit XLIFF
+        (the original XML serialization), JLIFF (JSON Localization Interchange Fragment Format), and
+        other hypothetical serializations examples are used to demonstrate the semantic and
+        behavioral match between and among different serialization formats as facilitated by this
+        Object Model. The ultimate goal of this specification is to enable localization tools to
+        pass localizable content including software strings from one step of the localization
+        process to any other, while enabling interoperability between and among tools without
+        enforcing a specific serialization.</para>
     </abstract>
 
     <legalnotice role="status">
@@ -332,7 +342,7 @@
   <section>
     <title>Introduction</title>
 
-    <para>Localization Interchange Object Model (XLIFF2OM) is the <emphasis>XLIFF 2 Object
+    <para>Localization Interchange Object Model (LIOM) is the <emphasis>XLIFF 2 Object
         Model</emphasis> designed by a group of multilingual content publishers, software providers,
       localization service providers, localization tools providers and researchers. It is intended
       to give any multilingual content owner a single object and data model that can be subject to
@@ -384,7 +394,9 @@
             <term>Agent</term>
 
             <listitem>
-              <para>any application or tool that generates (creates), reads, edits, writes, processes, stores, renders or otherwise handles <firstterm>XLIFF Documents</firstterm>.</para>
+              <para>any application or tool that generates (creates), reads, edits, writes,
+                processes, stores, renders or otherwise handles documents, messages, or any other
+                instantiations of the <firstterm>LIOM</firstterm>.</para>
               <para><firstterm>Agent</firstterm> is the most general application conformance target
                 that subsumes all other specialized user agents disregarding whether they are
                 defined in this specification or not.</para>
@@ -395,8 +407,8 @@
             <term>Enrich</term>
             <term>Enriching</term>
             <listitem>
-              <para> the process of associating module and extension based metadata and resources
-                with the <firstterm>Extracted</firstterm> XLIFF payload </para>
+              <para> the process of associating metadata and resources with the
+                  <firstterm>Extracted</firstterm> LIOM based payload </para>
               <itemizedlist>
                 <title>Processing Requirements</title>
               <listitem><para>
@@ -418,9 +430,10 @@
             <term>Extract</term>
             <term>Extraction</term>
             <listitem>
-              <para>the process of encoding localizable content from a native content or User Interface format as XLIFF payload, so that localizable parts of the content
-                in the source language are available for <firstterm>Translation</firstterm> into the target language along with the necessary context information
-              </para>
+              <para>the process of encoding localizable content from a native content or User
+                Interface format as LIOM based payload, so that localizable parts of the content in
+                the source language are available for <firstterm>Translation</firstterm> into the
+                target language along with the necessary context information </para>
             </listitem>
           </varlistentry>
 
@@ -440,9 +453,10 @@
             <term>Merging</term>
 
             <listitem>
-              <para>the process of importing XLIFF payload back to the originating native format, based on the <emphasis>full knowledge</emphasis> of the <firstterm>Extraction</firstterm> mechanism, so that the localized content or User Interface strings
-                replace the source language in the native format
-              </para>
+              <para>the process of importing LIOM based payload back to the originating native
+                format, based on the <emphasis>full knowledge</emphasis> of the
+                  <firstterm>Extraction</firstterm> mechanism, so that the localized content or User
+                Interface strings replace the source language in the native format </para>
             </listitem>
           </varlistentry>
 
@@ -470,9 +484,9 @@
             <term>Modify</term>
             <term>Modification</term>
             <listitem>
-              <para>
-                the process of changing core and module XLIFF structural and inline elements that were previously created by other <firstterm>Writers</firstterm>
-               </para>
+              <para> the process of changing core and module LIOM based structural and inline
+                elements that were previously created by other <firstterm>Writers</firstterm>
+              </para>
               <itemizedlist>
                 <title>Processing Requirements</title>
                 <listitem><para>
@@ -533,10 +547,10 @@
             <term>Writer Agent</term>
 
             <listitem>
-              <para>an <firstterm>Agent</firstterm> that creates, generates, or otherwise writes an
-                  <firstterm>XLIFF Document</firstterm> for whatever purpose, including but not
-                limited to <firstterm>Extractor</firstterm>, <firstterm>Modifier</firstterm>, and
-                  <firstterm>Enricher</firstterm>
+              <para>an <firstterm>Agent</firstterm> that creates, generates, or otherwise writes a
+                document or me<firstterm>XLIFF Document</firstterm> for whatever purpose, including
+                but not limited to <firstterm>Extractor</firstterm>,
+                <firstterm>Modifier</firstterm>, and <firstterm>Enricher</firstterm>
                 <firstterm>Agents</firstterm>. </para>
 
               <note><para>Since XLIFF is intended as an exchange format rather than a processing format, many
@@ -562,30 +576,26 @@
 
         <variablelist>
           <varlistentry>
-            <term>XLIFF Core</term>
-
+            <term>LIOM Core</term>
             <listitem>
-              <para>The core of XLIFF &version; consists of the minimum set of XML
-              elements and attributes required to (a) prepare a document that
-              contains text extracted from one or more files for localization,
-              (b) allow it to be completed with the translation of the
-              extracted text, and (c) allow the generation of <firstterm>Translated</firstterm>
-              versions of the original document.</para>
-
+              <para>The core of LIOM &version; consists of the minimum set of data objects required
+                to (a) prepare a LIOM Instance that contains text extracted from one or more files
+                for localization, (b) allow it to be completed with the translation of the extracted
+                text, and (c) allow the generation of <firstterm>Translated</firstterm> versions of
+                the original document.</para>
               <para>The XML namespace that corresponds to the core subset of XLIFF &version; is
-              <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code>.</para>
+                  <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code>.</para>
             </listitem>
           </varlistentry>
-
           <varlistentry>
             <term>XLIFF-defined (elements and attributes)</term>
-            <listitem><para>The following is the list of allowed schema URI prefixes for
+            <listitem>
+              <para>The following is the list of allowed schema URI prefixes for
                   <firstterm>XLIFF-defined</firstterm> elements and attributes:</para>
               <simplelist>
                 <member><code>urn:oasis:names:tc:xliff:</code></member>
                 <member><code>https://www.w3.org/2005/11/its/</code></member>
               </simplelist>
-
               <para>However, the following namespaces are NOT considered
                   <firstterm>XLIFF-defined</firstterm> for the purposes of the XLIFF &version;
                 specification:</para>
@@ -595,36 +605,47 @@
                 <member><code>urn:oasis:names:tc:xliff:document:1.2</code></member>
                 <member><code>urn:oasis:names:tc:xliff:changetracking:&bschversion;</code></member>
               </simplelist>
-            <para>Elements and attributes from other namespaces are not <firstterm>XLIFF-defined</firstterm>.</para>
-            </listitem>
-
-
-          </varlistentry>
-
-          <varlistentry>
-            <term>XLIFF Document</term>
-
-            <listitem>
-              <para>Any XML document that declares the namespace
-                  <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code> as its main namespace, has
-                  <olink targetdoc="elements/structural/xliff.xml" targetptr="xliff"
-                    ><code>&lt;xliff></code></olink> as the root element and complies with the XML
-                Schemas and the declared Constraints that are part of this specification.</para>
+              <para>Elements and attributes from other namespaces are not
+                  <firstterm>XLIFF-defined</firstterm>.</para>
             </listitem>
           </varlistentry>
-
           <varlistentry>
-            <term>XLIFF Module</term>
-
+            <term>LIOM Conformant Specification</term>
             <listitem>
-              <para>A module is an <glossterm>optional</glossterm> set of XML elements and attributes
-              that stores information about a process applied to an <firstterm>XLIFF
-                Document</firstterm> and the data incorporated into the document as result
-              of that process.</para>
-
-              <para>Each official module defined for XLIFF &version; has its grammar
-              defined in an independent XML Schema with a separate
-              namespace.</para>
+              <para>A publicly available specification that normatively defines a serialization
+                (document or message payload format) that conforms to the LIOM defined in this
+                specification.</para>
+              <para>Currently known conformant specifications include [XLIFF Vesrion 2.0], [XLIFF
+                Version 2.1], and JLIFF Version 1.0.</para>
+            </listitem>
+            
+          </varlistentry>
+        
+          <varlistentry>
+            <term>LIOM Instance</term>
+            <listitem>
+              <para>A document or message payload that is a valid instance of any LIOM Conformant
+                Specification. 
+                <note>
+                  <para>Documents or messages cannot conform directly to LIOM, as LIOM doesn't
+                    define a serialization and an ad hoc format cannot be reliably checked against
+                    the complex requirements of the LIOM. Currently known LIOM instances include
+                    XLIFF 2 files or JLIFF messages. XLIFF 1.2 Documents are NOT LIOM
+                    Instances.</para>
+                </note>
+                 </para>
+              
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term>LIOM Module</term>
+            <listitem>
+              <para>A module is an <glossterm>optional</glossterm> set of XML elements and
+                attributes that stores information about a process applied to an <firstterm>XLIFF
+                  Document</firstterm> and the data incorporated into the document as result of that
+                process.</para>
+              <para>Each official module defined for XLIFF &version; has its grammar defined in an
+                independent XML Schema with a separate namespace.</para>
             </listitem>
           </varlistentry>
         </variablelist>
