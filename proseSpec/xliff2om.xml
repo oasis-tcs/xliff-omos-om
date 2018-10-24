@@ -626,7 +626,24 @@
               </para>
             </listitem>
           </varlistentry>
+          
           <varlistentry>
+            <term>LIOM-defined namespaces</term>
+            <listitem>
+              <para>All <firstterm>XLIFF-defined</firstterm> namespaces are
+                  <firstterm>LIOM-defined</firstterm> namespaces. This specification doesn't define
+                any <firstterm>LIOM-defined</firstterm> namespaces that are not
+                  <firstterm>XLIFF-defined</firstterm>, however the notions are not considered
+                strictly equivalent and future LIOM versions <glossterm>may</glossterm> define
+                  <firstterm>LIOM-defined</firstterm> namespaces that are not
+                  <firstterm>XLIFF-defined</firstterm>. Albeit it would be expected that future
+                XLIFF Versions <glossterm>should</glossterm> adopt those or at least
+                  <firstterm>should not</firstterm> adopt other namespaces with incompatible
+                semantics.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            
             <term>LIOM Conformant Specification</term>
             <listitem>
               <para>A publicly available specification that normatively defines a serialization
@@ -832,18 +849,18 @@
   <section id="core">
     <title>The Core Specification</title>
 
-    <para>LIFF OM is a bilingual object model designed for containing text
-      that needs <firstterm>Translation</firstterm>, its corresponding translations and auxiliary data
-      that makes the <firstterm>Translation</firstterm> process possible.</para>
+    <para>LIOM is a bilingual object model designed for containing text that needs
+        <firstterm>Translation</firstterm>, its corresponding translations and auxiliary data that
+      makes the <firstterm>Translation</firstterm> process possible.</para>
 
     <para>At creation time, a <firstterm>LIFF Object</firstterm> <glossterm>may</glossterm> contain only text in the source
     language. Translations expressed in the target language <glossterm>may</glossterm> be added at a
     later time.</para>
 
-<para>The LIFF OM postulates several possible root objects. The highest level object is <code>LIF</code>.
-</para>
+<para>The LIOM postulates several possible root objects. The highest possible level root object is
+        <code>LIF</code>. </para>
 
-    <para>The <code>LIFF</code> object corresponds to the root element of an <firstterm>XLIFF
+    <para>The <code>LIF</code> object corresponds to the root element of an <firstterm>XLIFF
         Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
         targetptr="xliff"><code>&lt;xliff&gt;</code></olink>. </para>
     <para> WORK IN PROGRESS!!! THE FOLLOEING PARTS OF THE SPECIFICATION NEED RESTATED IN AN XML INDEPENDENT WAY
@@ -871,12 +888,16 @@
         <title/>
 
         <listitem>
-          <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>XLIFF Document</firstterm> that contains <firstterm>XLIFF-defined</firstterm> elements and attributes that
-            it cannot handle <glossterm>must</glossterm> preserve those elements and attributes.</para>
+          <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>LIOM
+              Instance</firstterm> that contains only objects  from namespaces that correspond to
+              <firstterm>XLIFF-defined</firstterm> elements and attributes that it cannot handle
+              <glossterm>must</glossterm> preserve those elements and attributes.</para>
         </listitem>
         <listitem>
-          <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>XLIFF Document</firstterm> that contains custom elements and attributes that it
-            cannot handle <glossterm>should</glossterm> preserve those elements and attributes.</para>
+          <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>LIOM
+              Instance</firstterm> that contains custom (extension objects from 3rd party namespaces
+            or ) objects that it cannot handle <glossterm>should</glossterm> preserve those objects
+            and values.</para>
         </listitem>
 
         </itemizedlist>
