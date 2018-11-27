@@ -37,7 +37,7 @@
        %all-titles;
 -->
 
-<!-- Entities for XLIFF V2.x publishing.................................... -->
+<!-- Entities for XLIFF 2 OM V1.0 publishing.................................... -->
 <!--copy all of these to all *.sch files and also to the Oxygen framework for validating Docbook 4.5 if you use Oxygen -->
 <!ENTITY name "xliff2om-v&version;">
 <!ENTITY pversion "N/A">
@@ -57,11 +57,11 @@
 <!ENTITY previous-loc "http://docs.oasis-open.org/xliff-omos/xliff2om/v&version;/&pstage;">
 <!ENTITY latest-loc "http://docs.oasis-open.org/xliff-omos/xliff2om/v&version;">
 
-<!ENTITY pubdate "23 October &pubyear;">
+<!ENTITY pubdate "27 November &pubyear;">
 
 <!ENTITY pubyear "2018">
 <!ENTITY releaseinfo "Standards Track Work Product">
-<!-- End of XLIFF V2.x publishing entities -->
+<!-- End of XLIFF 2 OM V1.0 publishing entities -->
 
 <!-- End of DocBook additional general entities V4.5 ...................... -->
 <!-- ...................................................................... -->

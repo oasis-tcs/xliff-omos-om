@@ -1,36 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="stylesheets/oasis-specification-html-offline.xsl"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "docbook/docbookx.dtd"[
-<!ENTITY % xinclude SYSTEM "docbook/xinclude.mod">
-%xinclude;
-<!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
-<!--the document properties were transferred to "dockbook/dbgenent.mod"-->
-]>
-<article status="&standard;" lang="en-US">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "docbook/docbookx.dtd" >
+<article status="Working Draft 01" lang="en-US">
   <articleinfo>
-    <title>XLIFF 2 Object Model Version &version;</title>
+    <title>XLIFF 2 Object Model Version 1.0</title>
 
     <releaseinfo role="cvs">$Id: spectools-docbook-template-wd03.xml,v 1.4
     2010/07/08 12:28:15 admin Exp$</releaseinfo>
     <releaseinfo role="track">Standards Track Work Product</releaseinfo>
     
 
-    <productname>&name;</productname>
+    <productname class="trade">xliff2om-v1.0</productname>
 
-    <productnumber>&stage;</productnumber>
+    <productnumber>wd01</productnumber>
 
-    <releaseinfo role="OASIS-specification-this-authoritative">&this-loc;/&name;-&stage;.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&stage;.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&stage;.xml</releaseinfo>
+    <releaseinfo role="OASIS-specification-this-authoritative">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/xliff2om-v1.0-wd01.html</releaseinfo>
+    <releaseinfo role="OASIS-specification-this">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/xliff2om-v1.0-wd01.pdf</releaseinfo>
+    <releaseinfo role="OASIS-specification-this">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/xliff2om-v1.0-wd01.xml</releaseinfo>
 
     
-    <releaseinfo role="OASIS-specification-previous-authoritative">&previous-loc;/&name;-&pstage;.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous">&previous-loc;/&name;-&pstage;.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous">&previous-loc;/&name;-&pstage;.xml</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous-authoritative">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/N/A/xliff2om-v1.0-N/A.html</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/N/A/xliff2om-v1.0-N/A.pdf</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/N/A/xliff2om-v1.0-N/A.xml</releaseinfo>
 
-    <releaseinfo role="OASIS-specification-latest-authoritative">&latest-loc;/&name;.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.xml</releaseinfo>
+    <releaseinfo role="OASIS-specification-latest-authoritative">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/xliff2om-v1.0.html</releaseinfo>
+    <releaseinfo role="OASIS-specification-latest">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/xliff2om-v1.0.pdf</releaseinfo>
+    <releaseinfo role="OASIS-specification-latest">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/xliff2om-v1.0.xml</releaseinfo>
 
     <releaseinfo role="committee"><ulink url="http://www.oasis-open.org/committees/xliff/">OASIS
     XML Localisation Interchange File Format (XLIFF) TC</ulink></releaseinfo>
@@ -62,10 +56,10 @@
     </authorgroup>
 
 
-    <pubdate>&pubdate;</pubdate>
+    <pubdate>27 November 2018</pubdate>
 
     <copyright>
-      <year>&pubyear;</year>
+      <year>2018</year>
 
       <holder>OASIS Open, Inc. All Rights Reserved.</holder>
     </copyright>
@@ -73,7 +67,7 @@
     <legalnotice role="additional">
       <title>Additional artifacts</title>
 
-<!-- probably will have references to UML diagrams
+<!--  probably will have references to UML diagrams
       <para>This prose specification is one component of a Work Product that also includes:</para>
 
       <itemizedlist spacing="compact">
@@ -85,14 +79,14 @@
           
       
         </listitem>
-      </itemizedlist>-->
+      </itemizedlist> -->
       <para>NONE AT THE MOMENT</para>
       </legalnotice>
 
     <legalnotice role="related">
       <title>Related Work</title>
 
- <!--  <para>This specification replaces or supersedes:</para>
+ <!--   <para>This specification replaces or supersedes:</para>
 
       <itemizedlist spacing="compact">
         <listitem>
@@ -100,7 +94,7 @@
             05 August 2014. OASIS Standard. <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html">http://docs.oasis-open.org/xliff/xliff-core/v&pversion;/os/xliff-core-v&pversion;-os.html</ulink></para>
         </listitem>
       </itemizedlist>
-      -->
+       -->
 
       <para>This specification is related to:</para>
 
@@ -113,9 +107,7 @@
         <listitem>
           <para><emphasis>XLIFF Version 2.1.</emphasis> Edited by David Filip, Tom Comerford,
             Soroush Saadatfar, Felix Sasaki, and Yves Savourel. 13 February 2018. OASIS Standard.
-              <ulink
-              url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"
-              >http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink></para>
+              <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink></para>
         </listitem>
         
         <listitem>
@@ -123,10 +115,10 @@
             05 August 2014. OASIS Standard. <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html</ulink></para>
         </listitem>
 
-  <!--      <listitem>
+  <!--       <listitem>
           <para>{related specifications}</para>
         </listitem>
-  -->
+   -->
       </itemizedlist>
     </legalnotice>
 
@@ -140,51 +132,51 @@
       </para>
       
       <itemizedlist spacing="compact">
-        <title>Namespaces used normatively in both <olink targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
+        <title>Namespaces used normatively in both <link linkend="XLIFF21">[XLIFF 2.1]</link> and <link linkend="XLIFF20">[XLIFF 2.0]</link>:</title>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:document:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:document:2.0</para>
         </listitem>
         
         <listitem>
-          <para>urn:oasis:names:tc:xliff:matches:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:matches:2.0</para>
         </listitem>
         
         <listitem>
-          <para>urn:oasis:names:tc:xliff:glossary:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:glossary:2.0</para>
         </listitem>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:fs:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:fs:2.0</para>
         </listitem>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:metadata:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:metadata:2.0</para>
         </listitem>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:resourcedata:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:resourcedata:2.0</para>
         </listitem>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:sizerestriction:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:sizerestriction:2.0</para>
         </listitem>
         
         <listitem>
-          <para>urn:oasis:names:tc:xliff:validation:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:validation:2.0</para>
         </listitem>
       </itemizedlist>
       
       <itemizedlist>
-        <title>Namespaces used normatively only in <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>:</title>
+        <title>Namespaces used normatively only in <link linkend="XLIFF21">[XLIFF 2.1]</link>:</title>
         <listitem>
           <para>https://www.w3.org/2005/11/its/</para>
         </listitem>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:itsm:&cschversion;</para>
+          <para>urn:oasis:names:tc:xliff:itsm:2.1</para>
         </listitem>
         
       </itemizedlist>
       
       <itemizedlist>
-        <title>Namespaces used normatively only in <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
+        <title>Namespaces used normatively only in <link linkend="XLIFF20">[XLIFF 2.0]</link>:</title>
         <listitem>
-          <para>urn:oasis:names:tc:xliff:changetracking:&bschversion;</para>
+          <para>urn:oasis:names:tc:xliff:changetracking:2.0</para>
         </listitem>
         
         
@@ -192,7 +184,7 @@
     </legalnotice>
 
     <abstract>
-      <para>This document defines version &version; of the Localization Interchange Object Model
+      <para>This document defines version 1.0 of the Localization Interchange Object Model
         (LIOM) based on the XLIFF 2 Family of Standards. The purpose of this Object Model is to
         provide a serialization independent definition of objects, their relationships and data
         models, so that Localization tools can exchange translation and localization task data in an
@@ -210,26 +202,18 @@
     <legalnotice role="status">
       <title>Status</title>
 
-<!--      <para>{Describe the status and stability of the specification
-      here.}</para>-->
-      <para>This <ulink
-          url="https://www.oasis-open.org/policies-guidelines/tc-process#dWorkingDraft">Working
+<!--       <para>{Describe the status and stability of the specification
+      here.}</para> -->
+      <para>This <ulink url="https://www.oasis-open.org/policies-guidelines/tc-process#dWorkingDraft">Working
           Draft</ulink> (WD) has been produced by one or more TC Members; it has not yet been voted
-        on by the TC or <ulink
-          url="https://www.oasis-open.org/policies-guidelines/tc-process#committeeDraft"
-          >approved</ulink> as a Committee Draft (Committee Specification Draft or a Committee Note
-        Draft). The OASIS document <ulink
-          url="https://www.oasis-open.org/policies-guidelines/tc-process#standApprovProcess"
-          >Approval Process</ulink> begins officially with a TC vote to approve a WD as a Committee
+        on by the TC or <ulink url="https://www.oasis-open.org/policies-guidelines/tc-process#committeeDraft">approved</ulink> as a Committee Draft (Committee Specification Draft or a Committee Note
+        Draft). The OASIS document <ulink url="https://www.oasis-open.org/policies-guidelines/tc-process#standApprovProcess">Approval Process</ulink> begins officially with a TC vote to approve a WD as a Committee
         Draft. A TC may approve a Working Draft, revise it, and re-approve it any number of times as
         a Committee Draft.</para>
 
       <para>Technical Committee members should send comments on this specification to the Technical
         Committee's email list. Others should send comments to the Technical Committee by using the
-          "<ulink url="https://www.oasis-open.org/committees/comments/index.php?wg_abbrev=xliff-omos"
-          >Send A Comment</ulink>" button on the Technical Committee's web page at <ulink
-          url="https://www.oasis-open.org/committees/xliff-omos/"
-          >https://www.oasis-open.org/committees/xliff-omos/</ulink>.</para>
+          "<ulink url="https://www.oasis-open.org/committees/comments/index.php?wg_abbrev=xliff-omos">Send A Comment</ulink>" button on the Technical Committee's web page at <ulink url="https://www.oasis-open.org/committees/xliff-omos/">https://www.oasis-open.org/committees/xliff-omos/</ulink>.</para>
 
       <para>For information on whether any patents have been disclosed that
       may be essential to implementing this specification, and any offers of
@@ -240,11 +224,11 @@
         of a discrepancy between any such plain text file and display content in the Work Product's
         prose narrative document(s), the content in the separate plain text file prevails.</para>
 
-      <!--
+      <!-- 
       <para>The non-normative errata page for this specification is located at <ulink
           url="http://www.oasis-open.org/committees/xliff/"
           >http://www.oasis-open.org/committees/xliff-omos/</ulink>.</para>
-      -->
+       -->
     </legalnotice>
 
     <legalnotice role="citation">
@@ -253,18 +237,16 @@
       <para>When referencing this specification the following citation format should be used:</para>
 
 
-      <para><citation>XLIFF2OM-&version;</citation></para>
+      <para><citation>XLIFF2OM-1.0</citation></para>
 
-      <para><emphasis>XLIFF 2 Object Model Version &version;</emphasis>. Edited by David Filip.
-        &pubdate;. OASIS &standard;. <ulink url="&this-loc;/&name;-&stage;.html"
-          >&this-loc;/&name;-&stage;.html</ulink>. Latest version: <ulink
-          url="&latest-loc;/&name;.html">&latest-loc;/&name;.html</ulink>. </para>
+      <para><emphasis>XLIFF 2 Object Model Version 1.0</emphasis>. Edited by David Filip.
+        27 November 2018. OASIS Working Draft 01. <ulink url="http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/xliff2om-v1.0-wd01.html">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/xliff2om-v1.0-wd01.html</ulink>. Latest version: <ulink url="http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/xliff2om-v1.0.html">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/xliff2om-v1.0.html</ulink>. </para>
 
-      <!--
+      <!-- 
       <para>The non-normative errata page for this specification is located at <ulink
           url="http://www.oasis-open.org/committees/xliff/"
           >http://www.oasis-open.org/committees/xliff/</ulink>.</para>
-      -->
+       -->
     </legalnotice>
 
 
@@ -272,7 +254,7 @@
     <legalnotice role="notices">
       <title>Notices</title>
 
-      <para>Copyright © OASIS<!--®--> Open &pubyear;. All Rights Reserved.</para>
+      <para>Copyright © OASIS<!-- ® --> Open 2018. All Rights Reserved.</para>
 
       <para>All capitalized terms in the following text have the meanings
       assigned to them in the OASIS Intellectual Property Rights Policy (the
@@ -364,7 +346,7 @@
 
     <para><emphasis>All text is normative unless otherwise labeled.</emphasis> The following common methods are used for
       labeling portions of this specification as informative and hence non-normative:
-      <simplelist>
+      <simplelist type="vert">
         <member> Appendices and sections marked as "(Informative)" or "Non-Normative" in
           title,</member>
         <member> Notes (sections with the "Note" title),</member>
@@ -387,8 +369,7 @@
             <glossterm>required</glossterm>, <glossterm>shall</glossterm>, <glossterm>shall
             not</glossterm>, <glossterm>should</glossterm>, <glossterm>should not</glossterm>,
             <glossterm>recommended</glossterm>, <glossterm>may</glossterm>, and
-            <glossterm>optional</glossterm> are to be interpreted as described in <xref
-            linkend="rfc2119"/>.</para>
+            <glossterm>optional</glossterm> are to be interpreted as described in <xref linkend="rfc2119"/>.</para>
       </section>
 
       <section id="definitions">
@@ -517,7 +498,7 @@
           </varlistentry>
 
 
-          <!-- The Reader defintion was not really needed, since such an Agent (that ONLY reads) practically does not exist and the PR for Redaers are well covered by the use of Agent
+          <!--  The Reader defintion was not really needed, since such an Agent (that ONLY reads) practically does not exist and the PR for Redaers are well covered by the use of Agent
           <varlistentry>
             <term>Reader</term>
             <term>Reader Agent</term>
@@ -536,7 +517,7 @@
              </listitem>
 
           </varlistentry>
-          -->
+           -->
 
           <varlistentry>
             <term>Translation</term>
@@ -583,16 +564,15 @@
           <varlistentry>
             <term>LIOM Core</term>
             <listitem>
-              <para>The core of LIOM &version; consists of the minimum set of data objects required
+              <para>The core of LIOM 1.0 consists of the minimum set of data objects required
                 to (a) prepare a LIOM Instance that contains text <firstterm>Extracted</firstterm>
                 from one or more files for localization, (b) allow it to be completed with the
                 translation of the <firstterm>Extracted</firstterm> text, and (c) allow the
                 generation of <firstterm>Translated</firstterm> versions of the original
                 document.</para>
-              <para>The XML namespace that corresponds to the core subset of both <olink
-                  targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF
-                  2.0]</olink> is
-                <code>"urn:oasis:names:tc:xliff:document:&bschversion;"</code>.</para>
+              <para>The XML namespace that corresponds to the core subset of both <link linkend="XLIFF21">[XLIFF 2.1]</link> and <link linkend="XLIFF20">[XLIFF
+                  2.0]</link> is
+                <code>"urn:oasis:names:tc:xliff:document:2.0"</code>.</para>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -600,26 +580,25 @@
             <listitem>
               <para>The following is the list of allowed schema URI prefixes for
                   <firstterm>XLIFF-defined</firstterm> elements and attributes:</para>
-              <simplelist>
+              <simplelist type="vert">
                 <member><code>urn:oasis:names:tc:xliff:</code></member>
                 <member><code>https://www.w3.org/2005/11/its/</code></member>
               </simplelist>
               <para>However, the following namespaces are NOT considered
-                  <firstterm>XLIFF-defined</firstterm> for the purposes of the XLIFF &cschversion;
+                  <firstterm>XLIFF-defined</firstterm> for the purposes of the XLIFF 2.1
                 specification:</para>
-              <simplelist>
+              <simplelist type="vert">
                 <member><code>urn:oasis:names:tc:xliff:document:1.0</code></member>
                 <member><code>urn:oasis:names:tc:xliff:document:1.1</code></member>
                 <member><code>urn:oasis:names:tc:xliff:document:1.2</code></member>
-                <member><code>urn:oasis:names:tc:xliff:changetracking:&bschversion;</code></member>
+                <member><code>urn:oasis:names:tc:xliff:changetracking:2.0</code></member>
               </simplelist>
               <para>Elements and attributes from other namespaces are not
                   <firstterm>XLIFF-defined</firstterm>.</para>
               <para><emphasis role="bold">Source:</emphasis>
-                <olink targetptr="XLIFF21">[XLIFF 2.1]</olink>.</para>
-              <para> Because the definition of XLIFF-defined has been updated in <olink
-                  targetptr="XLIFF21">[XLIFF 2.1]</olink>, see <olink targetptr="XLIFF20">[XLIFF
-                  2.0]</olink> for an XLIFF 2.0 conformant definition. <note>
+                <link linkend="XLIFF21">[XLIFF 2.1]</link>.</para>
+              <para> Because the definition of XLIFF-defined has been updated in <link linkend="XLIFF21">[XLIFF 2.1]</link>, see <link linkend="XLIFF20">[XLIFF
+                  2.0]</link> for an XLIFF 2.0 conformant definition. <note>
                   <para>Implementers of the LIOM need to parametrize XLIFF-defined to achieve full
                     backwards and forwards compatibility with any XLIFF 2.x specifications. </para>
                 </note>
@@ -649,9 +628,7 @@
               <para>A publicly available specification that normatively defines a serialization
                 (document or message payload format) that conforms to the LIOM defined in this
                 specification.</para>
-              <para>Currently known conformant specifications include XLIFF Version 2.0 <olink
-                  targetptr="XLIFF20">[XLIFF 2.0]</olink>, XLIFF Version 2.1 <olink
-                  targetptr="XLIFF21">[XLIFF 21]</olink>, and JLIFF Version 1.0.</para>
+              <para>Currently known conformant specifications include XLIFF Version 2.0 <link linkend="XLIFF20">[XLIFF 2.0]</link>, XLIFF Version 2.1 <link linkend="XLIFF21">[XLIFF 21]</link>, and JLIFF Version 1.0.</para>
             </listitem>
             
           </varlistentry>
@@ -678,10 +655,10 @@
                 categories that were designed to store information about a process applied to a
                   <firstterm>LIOM Instance</firstterm> and the data incorporated into a
                   <firstterm>LIOM Instance</firstterm> as result of that process.</para>
-              <para>Each official module defined for LIOM Version &version; has its data categories
+              <para>Each official module defined for LIOM Version 1.0 has its data categories
                 and structure defined within this specification and corresponds to at least one
-                dedicated namespace, see <olink targetptr="namespaces">Normatively Used
-                  Namespaces</olink>.</para>
+                dedicated namespace, see <link linkend="namespaces">Normatively Used
+                  Namespaces</link>.</para>
             </listitem>
           </varlistentry>
         </variablelist>
@@ -691,7 +668,7 @@
     <section>
       <title>Normative References</title>
 
-      <!--note that at least one paragraph (and it can be empty) is needed to satisfy the DocBook document model-->
+      <!-- note that at least one paragraph (and it can be empty) is needed to satisfy the DocBook document model -->
 
       <para/>
 
@@ -714,31 +691,25 @@
       
         <bibliomixed><abbrev>JSON</abbrev>
           <title>The JavaScript Object Notation (JSON) Data Interchange Format</title>, <citetitle>
-            <ulink url="https://tools.ietf.org/html/rfc8259"
-              >https://tools.ietf.org/html/rfc8259</ulink>
+            <ulink url="https://tools.ietf.org/html/rfc8259">https://tools.ietf.org/html/rfc8259</ulink>
           </citetitle> IETF RFC 8259 December 2017. </bibliomixed>
         <bibliomixed id="bib_datetime"><abbrev>NOTE-datetime</abbrev> M. Wolf, C. Wicksteed,
             <title>Date and Time Formats</title>, <citetitle>
-            <ulink url="http://www.w3.org/TR/NOTE-datetime"
-              >http://www.w3.org/TR/NOTE-datetime</ulink>
+            <ulink url="http://www.w3.org/TR/NOTE-datetime">http://www.w3.org/TR/NOTE-datetime</ulink>
           </citetitle> W3C Note, 15th Setember 1997.</bibliomixed>
         <bibliomixed id="NVDL"><abbrev>NVDL</abbrev> International Standards Organization,
             <title>ISO/IEC 19757-4, Information Technology - Document Schema Definition Languages
             (DSDL) - Part 4: Namespace-based Validation Dispatching Language (NVDL)</title>, <citetitle>
-            <ulink
-              url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c038615_ISO_IEC_19757-4_2006(E).zip"
-              >
+            <ulink url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c038615_ISO_IEC_19757-4_2006(E).zip">
               http://standards.iso.org/ittf/PubliclyAvailableStandards/c038615_ISO_IEC_19757-4_2006(E).zip</ulink>
           </citetitle> ISO, June 1, 2006.</bibliomixed>
         <bibliomixed id="rfc2119"><abbrev>RFC 2119</abbrev> S. Bradner, <title>Key words for use in
             RFCs to Indicate Requirement Levels</title>, <citetitle>
-            <ulink url="https://www.ietf.org/rfc/rfc2119.txt"
-              >https://www.ietf.org/rfc/rfc2119.txt</ulink>
+            <ulink url="https://www.ietf.org/rfc/rfc2119.txt">https://www.ietf.org/rfc/rfc2119.txt</ulink>
           </citetitle> IETF (Internet Engineering Task Force) RFC 2119, March 1997.</bibliomixed>
         <bibliomixed id="rfc3987"><abbrev>RFC 3987</abbrev> M. Duerst and M. Suignard,
             <title>Internationalized Resource Identifiers (IRIs)</title>, <citetitle>
-            <ulink url="https://www.ietf.org/rfc/rfc3987.txt"
-              >https://www.ietf.org/rfc/rfc3987.txt</ulink>
+            <ulink url="https://www.ietf.org/rfc/rfc3987.txt">https://www.ietf.org/rfc/rfc3987.txt</ulink>
           </citetitle> IETF (Internet Engineering Task Force) RFC 3987, January 2005.</bibliomixed>
         <bibliomixed id="rfc7303"><abbrev>RFC 7303</abbrev> H. Thompson and C. Lilley, <title>XML
             Media Types</title>, <citetitle>
@@ -748,35 +719,28 @@
         <bibliomixed id="Schematron"><abbrev>Schematron</abbrev> International Standards
           Organization, <title>ISO/IEC 19757-3, Information Technology - Document Schema Definition
             Languages (DSDL) - Part 3: Rule-Based Validation — Schematron (Second Edition)</title>, <citetitle>
-            <ulink
-              url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c055982_ISO_IEC_19757-3_2016.zip"
-              >
+            <ulink url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c055982_ISO_IEC_19757-3_2016.zip">
               http://standards.iso.org/ittf/PubliclyAvailableStandards/c055982_ISO_IEC_19757-3_2016.zip</ulink>
           </citetitle> ISO, January 15, 2016.</bibliomixed>
         <bibliomixed id="uax9"><abbrev>UAX #9</abbrev> M. Davis, A. Lanin, A. Glass, <title>UNICODE
             BIDIRECTIONAL ALGORITHM</title>, <citetitle>
-            <ulink url="http://www.unicode.org/reports/tr9/tr9-35.html"
-              >http://www.unicode.org/reports/tr9/tr9-35.html</ulink>
+            <ulink url="http://www.unicode.org/reports/tr9/tr9-35.html">http://www.unicode.org/reports/tr9/tr9-35.html</ulink>
           </citetitle> Unicode Bidirectional Algorithm, May 18, 2016.</bibliomixed>
         <bibliomixed id="uax15"><abbrev>UAX #15</abbrev> M. Davis, K. Whistler, <title>UNICODE
             NORMALIZATION FORMS</title>, <citetitle>
-            <ulink url="http://www.unicode.org/reports/tr15/tr15-44.html"
-              >http://www.unicode.org/reports/tr15/tr15-44.html</ulink>
+            <ulink url="http://www.unicode.org/reports/tr15/tr15-44.html">http://www.unicode.org/reports/tr15/tr15-44.html</ulink>
           </citetitle> Unicode Normalization Forms, February 24, 2016.</bibliomixed>
         <bibliomixed id="Unicode"><abbrev>Unicode</abbrev> The Unicode Consortium, <title>The
             Unicode Standard</title>, <citetitle>
-            <ulink url="http://www.unicode.org/versions/Unicode9.0.0/"
-              >http://www.unicode.org/versions/Unicode9.0.0/</ulink>
+            <ulink url="http://www.unicode.org/versions/Unicode9.0.0/">http://www.unicode.org/versions/Unicode9.0.0/</ulink>
           </citetitle> Mountain View, CA: The Unicode Consortium, June 21, 2016.</bibliomixed>
         <bibliomixed id="XLIFF20"><abbrev>XLIFF 2.0</abbrev> Tom Comerford, David Filip, Rodolfo Raya, and Yves
           Savourel, eds. <title>XLIFF Version 2.0</title>, <citetitle>
-            <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html"
-              >http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html</ulink>
+            <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.0/os/xliff-core-v2.0-os.html</ulink>
           </citetitle> OASIS Standard 05 August 2014 </bibliomixed>
         <bibliomixed id="XLIFF21"><abbrev>XLIFF 2.1</abbrev> David Filip, Tom Comerford, Soroush Saadatfar, Felix
           Sasaki, and Yves Savourel, eds. <title>XLIFF Version 2.0</title>, <citetitle>
-            <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"
-              >http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink>
+            <ulink url="http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html">http://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html</ulink>
           </citetitle> OASIS Standard 13 February 2018 </bibliomixed>
         <bibliomixed id="bib_XML"><abbrev>XML</abbrev> W3C, <title>Extensible Markup Language (XML)
             1.0</title>, <citetitle>
@@ -784,17 +748,11 @@
           </citetitle> (Fifth Edition) W3C Recommendation 26 November 2008.</bibliomixed>
         <bibliomixed id="xml_namespace"><abbrev>XML namespace</abbrev> W3C, <title>Schema document
             for namespace http://www.w3.org/XML/1998/namespace</title>
-          <citetitle><ulink url="http://www.w3.org/2001/xml.xsd"
-              >http://www.w3.org/2001/xml.xsd</ulink></citetitle> [<edition><ulink
-              url="http://www.w3.org/2009/01/xml.xsd"
-            >http://www.w3.org/2009/01/xml.xsd</ulink>]</edition>. at <edition><ulink
-              url="&this-loc;/schemas/informativeCopiesOf3rdPartySchemas/w3c/xml.xsd"
-              >&this-loc;/schemas/informativeCopiesOf3rdPartySchemas/w3c/xml.xsd</ulink></edition>
+          <citetitle><ulink url="http://www.w3.org/2001/xml.xsd">http://www.w3.org/2001/xml.xsd</ulink></citetitle> [<edition><ulink url="http://www.w3.org/2009/01/xml.xsd">http://www.w3.org/2009/01/xml.xsd</ulink>]</edition>. at <edition><ulink url="http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/schemas/informativeCopiesOf3rdPartySchemas/w3c/xml.xsd">http://docs.oasis-open.org/xliff-omos/xliff2om/v1.0/wd01/schemas/informativeCopiesOf3rdPartySchemas/w3c/xml.xsd</ulink></edition>
           in this distribution</bibliomixed>
         <bibliomixed id="XMLCatalogs"><abbrev>XML Catalogs</abbrev> Norman Walsh, <title>XML
             Catalogs</title>, <citetitle>
-            <ulink url="https://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html"
-              >https://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html</ulink>
+            <ulink url="https://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html">https://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html</ulink>
           </citetitle> OASIS Standard V1.1, 07 October 2005.</bibliomixed>
         <bibliomixed id="XMLSchema"><abbrev>XML Schema</abbrev> W3C, <title>XML Schema</title>,
             <citetitle> refers to the two part standard comprising <link linkend="XMLSchema1">[XML
@@ -806,8 +764,7 @@
           </citetitle> (Second Edition) W3C Recommendation 28 October 2004.</bibliomixed>
         <bibliomixed id="XMLSchema1"><abbrev>XML Schema Structures</abbrev> W3C, <title>XML Schema
             Part 1: Structures</title>, <citetitle>
-            <ulink url="https://www.w3.org/TR/xmlschema-1/"
-              >https://www.w3.org/TR/xmlschema-1/</ulink>
+            <ulink url="https://www.w3.org/TR/xmlschema-1/">https://www.w3.org/TR/xmlschema-1/</ulink>
           </citetitle> (Second Edition) W3C Recommendation 28 October 2004.</bibliomixed>
       </bibliography>
     </section>
@@ -815,7 +772,7 @@
     <section>
       <title>Non-Normative References</title>
 
-      <!--note that at least one paragraph (and it can be empty) is needed to satisfy the DocBook document model-->
+      <!-- note that at least one paragraph (and it can be empty) is needed to satisfy the DocBook document model -->
 
       <para/>
 
@@ -842,10 +799,10 @@
       </bibliography>
     </section>
   </section>
-  <!--
+  <!-- 
   <xi:include href="conformance/conformance.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
   <xi:include href="fragments/fragments.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-  -->
+   -->
   <section id="core">
     <title>The Core Specification</title>
 
@@ -861,24 +818,12 @@
         <code>LIF</code>. </para>
 
     <para>The <code>LIF</code> object corresponds to the root element of an <firstterm>XLIFF
-        Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
-        targetptr="xliff"><code>&lt;xliff&gt;</code></olink>. </para>
+        Document</firstterm>, which is <link linkend="xliff"><code>&lt;xliff&gt;</code></link>. </para>
     <para> WORK IN PROGRESS!!! THE FOLLOEING PARTS OF THE SPECIFICATION NEED RESTATED IN AN XML INDEPENDENT WAY
       
-      It contains a collection of <olink
-        targetdoc="elements/structural/file.xml" targetptr="file"><code>&lt;file&gt;</code></olink>
-      elements. Typically, each <olink targetdoc="elements/structural/file.xml" targetptr="file"
-          ><code>&lt;file&gt;</code></olink> element contains a set of <olink
-        targetdoc="elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>
-      elements that contain the text to be translated in the <olink
-        targetdoc="elements/structural/source.xml" targetptr="source"
-        ><code>&lt;source&gt;</code></olink> child of one or more <olink
-        targetdoc="elements/structural/segment.xml" targetptr="segment"
-        ><code>&lt;segment&gt;</code></olink> elements. Translations are stored in the <olink
-        targetdoc="elements/structural/target.xml" targetptr="target"
-        ><code>&lt;target&gt;</code></olink> child of each <olink
-        targetdoc="elements/structural/segment.xml" targetptr="segment"
-        ><code>&lt;segment&gt;</code></olink> element.</para>
+      It contains a collection of <link linkend="file"><code>&lt;file&gt;</code></link>
+      elements. Typically, each <link linkend="file"><code>&lt;file&gt;</code></link> element contains a set of <link linkend="unit"><code>&lt;unit&gt;</code></link>
+      elements that contain the text to be translated in the <link linkend="source"><code>&lt;source&gt;</code></link> child of one or more <link linkend="segment"><code>&lt;segment&gt;</code></link> elements. Translations are stored in the <link linkend="target"><code>&lt;target&gt;</code></link> child of each <link linkend="segment"><code>&lt;segment&gt;</code></link> element.</para>
 
     <section>
       <title>General Processing Requirements</title>
@@ -903,7 +848,7 @@
         </itemizedlist>
     </section>
 
-<!-- commenting out XML spec until edited for OM
+<!--  commenting out XML spec until edited for OM
 
     <xi:include href="elements/elements.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
@@ -931,8 +876,8 @@
         </listitem>
       </itemizedlist>
     </section>
--->
-<!-- Section on XML Comments will be probably irrelevant
+ -->
+<!--  Section on XML Comments will be probably irrelevant
     <section>
       <title>XML Comments</title>
 
@@ -976,8 +921,8 @@ Text content that is important</programlisting>
         </listitem>
       </itemizedlist>
     </section>
-    -->
-    <!-- Section on XML Processing Instructions will be probably irrelevant
+     -->
+    <!--  Section on XML Processing Instructions will be probably irrelevant
     <section>
       <title>XML Processing Instructions</title>
 
@@ -1006,15 +951,15 @@ Text content that is important</programlisting>
       </warning>
 
     </section>
-    -->
-<!-- The following sections need stated in an XML independent way 
+     -->
+<!--  The following sections need stated in an XML independent way 
     Commenting them out until done...
    
     <xi:include href="inline/inline.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="segmentation/segmentation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="extensions/extensions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
--->
+ -->
 
   </section>
   <section id="modules">
@@ -1023,10 +968,10 @@ Text content that is important</programlisting>
     
     <para>ALL MODULE INCLUDES COMMENTED OUT AT THE MOMENT .. WORKING ON CORE ONLY SO FAR</para>
 
-    <!--Module includes-->
-    <!-- 2.0 modules come first. Even if a module is deprecated, the spec should keep a placeholder, so that modules are numbered presistently in all 2.x versions-->  
+    <!-- Module includes -->
+    <!--  2.0 modules come first. Even if a module is deprecated, the spec should keep a placeholder, so that modules are numbered presistently in all 2.x versions -->  
     
-    <!--
+    <!-- 
       <xi:include href="modules/candidates/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/glossary/specification.xml"
@@ -1036,19 +981,19 @@ Text content that is important</programlisting>
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/resourcedata/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
-    <!-- CTR deprecated in XLIFF 2.1 but still listed as an Extension until it can be replaced with CTR 2.2--> 
-<!--    <xi:include href="modules/change-tracking/specification.xml"
+       -->
+    <!--  CTR deprecated in XLIFF 2.1 but still listed as an Extension until it can be replaced with CTR 2.2 --> 
+<!--     <xi:include href="modules/change-tracking/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/size_restriction/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
       <xi:include href="modules/validation/specification.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
-    <!-- 2.1 modules -->
-<!--      <xi:include href="modules/itsm/specification.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
-    <!-- 2.2 and 2.n+1 modules -->
+       -->
+    <!--  2.1 modules  -->
+<!--       <xi:include href="modules/itsm/specification.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+       -->
+    <!--  2.2 and 2.n+1 modules  -->
   </section>
   
   <appendix role="informative" id="mediaType">
@@ -1061,11 +1006,11 @@ Text content that is important</programlisting>
         <tbody>
           <row>
             <entry>XLIFF 2 and higher</entry>
-            <entry></entry>
+            <entry/>
           </row>
           <row>
             <entry>JLIFF</entry>
-            <entry></entry>
+            <entry/>
           </row>
         </tbody>
       </tgroup>
@@ -1079,7 +1024,7 @@ Text content that is important</programlisting>
     <para>CURRENTLY NO VALIDATION ARTIFACTS FORESEEN FOR THE OM.. JUST FOR SERIALIZATIONS</para>
     <para> MAY LIST CONFORMANT ARTIFACTS FOR SPECIFIC SERILIZATIONS AT A LATER STAGE </para>
       
-      <!--
+      <!-- 
       <orderedlist>
         <listitem id="CoreSchema">
           <para><firstterm>XLIFF Core</firstterm> <link linkend="XMLSchema">[XML Schema]</link>,</para>
@@ -1137,21 +1082,21 @@ Text content that is important</programlisting>
       </warning>
     
     </para>
-    -->
+     -->
     
-    <!--  <para>[Relax NG schemas of <firstterm>XLIFF Core and Modules</firstterm> are provided. Although the Relax NG schemas are intended as normative validation artifacts, the XML Schema 1.0 [add normative reference] schemas and Schematron [add normative reference] schemas have precedence in case of conflicting validation results.]
-      [This is only relevant if Relax NG is provided.]</para>-->
+    <!--   <para>[Relax NG schemas of <firstterm>XLIFF Core and Modules</firstterm> are provided. Although the Relax NG schemas are intended as normative validation artifacts, the XML Schema 1.0 [add normative reference] schemas and Schematron [add normative reference] schemas have precedence in case of conflicting validation results.]
+      [This is only relevant if Relax NG is provided.]</para> -->
     
     
-<!--    <xi:include href="core/tree.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/> -->
+<!--     <xi:include href="core/tree.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>  -->
 
-<!-- TC agreed not to include the schema listings
+<!--  TC agreed not to include the schema listings
     <xi:include href="core/catalog.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
    
     <xi:include href="core/schema.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
--->
+ -->
 
-    <!-- The following sections need stated in an XML independent way 
+    <!--  The following sections need stated in an XML independent way 
     Commenting them out until done...
     <section>
       <title>Support Schemas</title>
@@ -1174,9 +1119,9 @@ Text content that is important</programlisting>
 
   </appendix>
   
-  -->
+   -->
 
-  <!-- consensus in meeting on 3rd May 2016 to get rid of the ITS appendix and summarize ITS support in the Module specification 
+  <!--  consensus in meeting on 3rd May 2016 to get rid of the ITS appendix and summarize ITS support in the Module specification 
   <appendix role="informative" id="ITSSupport">
     <title>ITS 2.0 Support in XLIFF Version 2.1</title>
     <para>This appendix provides a non-normative summary of <olink
@@ -1198,7 +1143,7 @@ Text content that is important</programlisting>
     
     
   </appendix>
-  -->
+   -->
 </appendix>
 
   <appendix role="informative" id="specChangeTracking">
@@ -1206,10 +1151,10 @@ Text content that is important</programlisting>
     
     <para>This appendix will contain tracked changes after the csprd01 phase will have been
       reached.</para>
-    <!--  
+    <!--   
     <xi:include href="ReviewChangeTracking/ReviewChangeTrack.xml"
       xmlns:xi="http://www.w3.org/2001/XInclude"/>
-      -->
+       -->
   </appendix>
 
   <appendix role="informative" id="acknowledgements">
