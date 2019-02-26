@@ -57,9 +57,9 @@
 <!ENTITY previous-loc "http://docs.oasis-open.org/xliff-omos/xliff2om/v&version;/&pstage;">
 <!ENTITY latest-loc "http://docs.oasis-open.org/xliff-omos/xliff2om/v&version;">
 
-<!ENTITY pubdate "27 November &pubyear;">
+<!ENTITY pubdate "25 February &pubyear;">
 
-<!ENTITY pubyear "2018">
+<!ENTITY pubyear "2019">
 <!ENTITY releaseinfo "Standards Track Work Product">
 <!-- End of XLIFF 2 OM V1.0 publishing entities -->
 

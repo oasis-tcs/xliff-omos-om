@@ -6,23 +6,32 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <section id="ignorable">
-    <title>ignorable</title>
+    <title>(ignorable) sub-unit with the <code>segment</code> flag set to <code>no</code></title>
     <para>Part of the extracted content that is not included in a segment (and therefore not
-        translatable). For example tools can use <code>&lt;ignorable&gt;</code> to store the white
-        space and/or codes that are between two segments.</para>
+        translatable). For example tools can use <code>(ignorable)</code> to store the white space
+        and/or codes that are between two segments.</para>
     <para><emphasis>Contains:</emphasis></para>
     <simplelist>
-        <member>- One <olink targetdoc="source.xml" targetptr="source"><code>&lt;source></code></olink> element 
-            followed by</member>
-        <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"><code>&lt;target></code></olink> element</member>
+        <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
+            object followed by</member>
+        <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"
+                ><code>target</code></olink> element</member>
     </simplelist>
     
     <para><emphasis>Attributes:</emphasis></para>
     <simplelist>
         <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
     </simplelist>
+    <itemizedlist>
+        <title>LIOM Conformance Requirements</title>
+        <listitem><para>LIOM Conformant specifications <glossterm>may</glossterm> omit ordering the
+                    <code>source</code> and <code>target</code> objects as long as they provide a
+                method to unequivocally discern the <code>source</code> and <code>target</code>
+                objects. </para></listitem>
+    </itemizedlist> 
     
-    <!-- The uniqueness scope is described on the id attribute <itemizedlist>
+    <!-- 
+The uniqueness scope is described on the id attribute <itemizedlist>
         <title>Constraints</title>
         <listitem><para>The value of the <glossterm>optional</glossterm>
             <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink> 

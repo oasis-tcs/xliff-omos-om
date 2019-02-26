@@ -8,7 +8,7 @@
 ]>
 <article status="&standard;" lang="en-US">
   <articleinfo>
-    <title>XLIFF 2 Object Model Version &version;</title>
+    <title>XLIFF 2 Object Model, Version &version;</title>
 
     <releaseinfo role="cvs">$Id: spectools-docbook-template-wd03.xml,v 1.4
     2010/07/08 12:28:15 admin Exp$</releaseinfo>
@@ -107,7 +107,10 @@
       <itemizedlist spacing="compact">
         
         <listitem>
-          <para>[This will contain the JLIFF spec reference]</para>
+          <para><emphasis>JLIFF Version &version;</emphasis>. Edited by Robert van Engelen and David
+            Filip. &pubdate;. OASIS &standard;. <ulink url="&this-loc;/&name;-&stage;.html"
+              >&this-loc;/&name;-&stage;.html</ulink>. Latest version: <ulink
+              url="&latest-loc;/&name;.html">&latest-loc;/&name;.html</ulink>. </para>
         </listitem>
         
         <listitem>
@@ -133,11 +136,9 @@
     <legalnotice id="namespaces" role="namespaces">
       <title>Normatively Used Namespaces</title>
       
-      <para>
-        This specification doesn't declare any namespaces. However, it provides JSON specific methods to represent objects from the following namespaces.
-        
-        
-      </para>
+      <para> This specification doesn't declare any namespaces. However, it provides abstract (XML
+        independent) semantic and behavioral descriptions of data objects and their attributes or
+        properties from the following namespaces. </para>
       
       <itemizedlist spacing="compact">
         <title>Namespaces used normatively in both <olink targetptr="XLIFF21">[XLIFF 2.1]</olink> and <olink targetptr="XLIFF20">[XLIFF 2.0]</olink>:</title>
@@ -350,7 +351,7 @@
 
     <para>Localization Interchange Object Model (LIOM) is the <emphasis>XLIFF 2 Object
         Model</emphasis> designed by a group of multilingual content publishers, software providers,
-      localization service providers, localization tools providers and researchers. It is intended
+      localization service providers, localization tools providers, and researchers. It is intended
       to give any multilingual content owner a single object and data model that can be subject to
       any sort of serialization common now (such as XML, JSON, or protobuf) or a in the future.
       XLIFF 2 has been providing a reliable XML based interchange file format understood by any
@@ -491,7 +492,7 @@
             <term>Modification</term>
             <listitem>
               <para> the process of changing core and module LIOM based structural and inline
-                elements that were previously created by other <firstterm>Writers</firstterm>
+                objects that were previously created by other <firstterm>Writers</firstterm>
               </para>
               <itemizedlist>
                 <title>Processing Requirements</title>
@@ -553,16 +554,17 @@
 
             <listitem>
               <para>an <firstterm>Agent</firstterm> that creates, generates, or otherwise writes a
-                document or me<firstterm>XLIFF Document</firstterm> for whatever purpose, including
-                but not limited to <firstterm>Extractor</firstterm>,
-                <firstterm>Modifier</firstterm>, and <firstterm>Enricher</firstterm>
+                LIOM based document or message for whatever purpose, including but not limited to
+                  <firstterm>Extractor</firstterm>, <firstterm>Modifier</firstterm>, and
+                  <firstterm>Enricher</firstterm>
                 <firstterm>Agents</firstterm>. </para>
 
-              <note><para>Since XLIFF is intended as an exchange format rather than a processing format, many
-                  applications will need to generate <firstterm>XLIFF Documents</firstterm> from
-                  their internal processing formats, even in cases when they are processing
-                    <firstterm>XLIFF Documents</firstterm> created by another
-                    <firstterm>Extractor</firstterm>. </para></note>
+              <note><para>LIOM intends to define lossless interchange between and among different pipelines that can be
+                  based on arbitrary LIOM conformant specifications (public) or even private
+                  informally LIOM based formats (that could evolve into LIOM conformant public spec
+                  over time). Details of interchange using a given serialization are not to be found
+                  in this specification but in the specification that describes that format such as
+                  XLIFF Version 2.1 or JLIFF Version 1.0.</para></note>
             </listitem>
 
 
@@ -585,8 +587,8 @@
             <listitem>
               <para>The core of LIOM &version; consists of the minimum set of data objects required
                 to (a) prepare a LIOM Instance that contains text <firstterm>Extracted</firstterm>
-                from one or more files for localization, (b) allow it to be completed with the
-                translation of the <firstterm>Extracted</firstterm> text, and (c) allow the
+                from one or more content nodes for localization, (b) allow it to be completed with
+                the translation of the <firstterm>Extracted</firstterm> text, and (c) allow the
                 generation of <firstterm>Translated</firstterm> versions of the original
                 document.</para>
               <para>The XML namespace that corresponds to the core subset of both <olink
@@ -647,8 +649,8 @@
             <term>LIOM Conformant Specification</term>
             <listitem>
               <para>A publicly available specification that normatively defines a serialization
-                (document or message payload format) that conforms to the LIOM defined in this
-                specification.</para>
+                (document, fragment or message payload format) that conforms to the LIOM defined in
+                this specification.</para>
               <para>Currently known conformant specifications include XLIFF Version 2.0 <olink
                   targetptr="XLIFF20">[XLIFF 2.0]</olink>, XLIFF Version 2.1 <olink
                   targetptr="XLIFF21">[XLIFF 21]</olink>, and JLIFF Version 1.0.</para>
@@ -659,13 +661,13 @@
           <varlistentry>
             <term>LIOM Instance</term>
             <listitem>
-              <para>A document or message payload that is a valid instance of any <firstterm>LIOM
-                  Conformant Specification</firstterm>. <note>
-                  <para>Documents or messages cannot conform directly to LIOM, as LIOM doesn't
-                    define a serialization and an <emphasis>ad hoc</emphasis> format cannot be
-                    reliably checked against the complex requirements of the LIOM. Currently known
-                    LIOM instances include XLIFF 2 files or JLIFF Instances. XLIFF 1.2 files are NOT
-                      <firstterm>LIOM Instances</firstterm>.</para>
+              <para>A document, fragment or message payload that is a valid instance of any
+                  <firstterm>LIOM Conformant Specification</firstterm>. <note>
+                  <para>Documents, fragments or message payloads cannot conform directly to LIOM, as
+                    LIOM doesn't define a serialization and an <emphasis>ad hoc</emphasis> format
+                    cannot be reliably checked against the complex requirements of the LIOM.
+                    Currently known LIOM instances include XLIFF 2 files or JLIFF Instances. XLIFF
+                    1.2 files are NOT <firstterm>LIOM Instances</firstterm>.</para>
                 </note>
               </para>
               
@@ -861,25 +863,17 @@
         <code>LIF</code>. </para>
 
     <para>The <code>LIF</code> object corresponds to the root element of an <firstterm>XLIFF
-        Document</firstterm>, which is <olink targetdoc="elements/structural/xliff.xml"
-        targetptr="xliff"><code>&lt;xliff&gt;</code></olink>. </para>
-    <para> WORK IN PROGRESS!!! THE FOLLOEING PARTS OF THE SPECIFICATION NEED RESTATED IN AN XML INDEPENDENT WAY
-      
-      It contains a collection of <olink
-        targetdoc="elements/structural/file.xml" targetptr="file"><code>&lt;file&gt;</code></olink>
-      elements. Typically, each <olink targetdoc="elements/structural/file.xml" targetptr="file"
-          ><code>&lt;file&gt;</code></olink> element contains a set of <olink
-        targetdoc="elements/structural/unit.xml" targetptr="unit"><code>&lt;unit&gt;</code></olink>
-      elements that contain the text to be translated in the <olink
-        targetdoc="elements/structural/source.xml" targetptr="source"
-        ><code>&lt;source&gt;</code></olink> child of one or more <olink
-        targetdoc="elements/structural/segment.xml" targetptr="segment"
-        ><code>&lt;segment&gt;</code></olink> elements. Translations are stored in the <olink
-        targetdoc="elements/structural/target.xml" targetptr="target"
-        ><code>&lt;target&gt;</code></olink> child of each <olink
-        targetdoc="elements/structural/segment.xml" targetptr="segment"
-        ><code>&lt;segment&gt;</code></olink> element.</para>
-
+        Document</firstterm>, which is <code>&lt;xliff&gt;</code>. It contains a collection of
+        <code>file</code> objects that correspond to XLIFF <code>&lt;file&gt;</code> elements.
+      Typically, each <code>file</code> object contains a set of <code>unit</code> objects
+      (corresponding to XLIFF <code>&lt;unit&gt;</code> elements) that contain the text to be
+      translated in the <code>source</code> children of one or more <code>sub-unit</code> objects.
+      Translations are stored in the <code>target</code> children of the subunits that can have
+      their <code>segment:Boolean</code> flag set to <code>true</code> (corresponding to the XLIFF
+        <code>&lt;segment></code> element) or false (corresponding to the XLIFF
+        <code>&lt;ignorable></code> elements).</para>
+    
+    
     <section>
       <title>General Processing Requirements</title>
 
@@ -889,24 +883,25 @@
 
         <listitem>
           <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>LIOM
-              Instance</firstterm> that contains only objects  from namespaces that correspond to
-              <firstterm>XLIFF-defined</firstterm> elements and attributes that it cannot handle
-              <glossterm>must</glossterm> preserve those elements and attributes.</para>
+              Instance</firstterm> that contains only objects and properties from namespaces that
+            correspond to <firstterm>XLIFF-defined</firstterm> elements and attributes that it
+            cannot handle <glossterm>must</glossterm> preserve those objects and properties.</para>
         </listitem>
         <listitem>
           <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>LIOM
-              Instance</firstterm> that contains custom (extension objects from 3rd party
-            namespaces) objects that it cannot handle <glossterm>should</glossterm> preserve those
-            objects and values.</para>
+              Instance</firstterm> that contains custom objects (extension objects from namespaces
+            that are neither XLIFF-defined nor LIOM-defined) that it cannot handle
+              <glossterm>should</glossterm> preserve those objects and properties.</para>
         </listitem>
 
         </itemizedlist>
     </section>
 
-<!-- commenting out XML spec until edited for OM
+
 
     <xi:include href="elements/elements.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
+    <!-- commenting out XML spec until edited for OM
     <xi:include href="attributes/attributes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
     <section>

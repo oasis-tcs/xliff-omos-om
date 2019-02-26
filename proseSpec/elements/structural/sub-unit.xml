@@ -6,21 +6,20 @@
 <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED">
 ]>
 <section id="segment">
-  <title>(segment) sub-unit with the <code>segment</code> flag set to <code>true</code></title>
+  <title>sub-unit</title>
 
-  <para>This object is a container to hold in its aligned pair of children elements the minimum
-    portion of translatable source text and its <firstterm>Translation</firstterm> in the given
-      <olink targetdoc="../../segmentation/segmentation.xml" targetptr="segmentation"
-      >Segmentation</olink>.</para>
+  <para>This element is a container to hold in its aligned pair of children elements the minimum portion of
+    translatable source text and its <firstterm>Translation</firstterm> in the given <olink targetdoc="../../segmentation/segmentation.xml" targetptr="segmentation">Segmentation</olink>.</para>
 
   <para><emphasis>Contains:</emphasis></para>
 
   <simplelist>
-    <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>
-      object followed by</member>
+    <member>- One <olink targetdoc="source.xml"
+    targetptr="source"><code>&lt;source&gt;</code></olink> element followed
+    by</member>
 
-    <member>- Zero or one <olink targetdoc="target.xml" targetptr="target"
-        ><code>target</code></olink> object</member>
+    <member>- Zero or one <olink targetdoc="target.xml"
+    targetptr="target"><code>&lt;target&gt;</code></olink> element</member>
   </simplelist>
 
   <para><emphasis>Attributes:</emphasis></para>
@@ -47,13 +46,7 @@
     targetptr="substate"><code>subState</code></olink>, <glossterm>optional</glossterm></member>
 
   </simplelist>
-  <itemizedlist>
-    <title>LIOM Conformance Requirements</title>
-    <listitem><para>LIOM Conformant specifications <glossterm>may</glossterm> omit ordering the
-          <code>source</code> and <code>target</code> objects as long as they provide a method to
-        unequivocally discern the <code>source</code> and <code>target</code> objects. </para></listitem>
-  </itemizedlist> 
-  
+
   <!--  The uniqueness scope is described on the id attribute 
   <itemizedlist>
     <title>Constraints</title>
