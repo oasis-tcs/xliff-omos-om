@@ -8,81 +8,92 @@
 <section id="id">
   <title>id</title>
 
-  <para>Identifier - a character string used to identify an element.</para>
+  <para>Identifier - a character string used to identify an object.</para>
 
-  <para><emphasis>Value description:</emphasis> NMTOKEN. The scope of the values for this attribute
+  <para><emphasis>Value description:</emphasis> NMTOKEN. The scope of the values for this property
     depends on the element, in which it is used.</para>
 
   <itemizedlist>
     <listitem>
-      <para>When used in a <olink targetdoc="../elements/structural/file.xml"
-        targetptr="file"><code>&lt;file></code></olink> element:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/file.xml"
-        targetptr="file"><code>&lt;file></code></olink> <code>id</code> attribute values within the enclosing  <olink
-              targetdoc="../elements/structural/xliff.xml" targetptr="xliff"
-              ><code>&lt;xliff></code></olink> element.</para>
+      <para>When used in a <olink targetdoc="../elements/structural/file.xml" targetptr="file"
+            ><code>file</code></olink> object:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>
+        <code>id</code> property values within the enclosing <olink
+          targetdoc="../elements/structural/xliff.xml" targetptr="xliff"><code>LIF</code></olink>
+        object.</para>
     </listitem>
 
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/group.xml"
-        targetptr="group"><code>&lt;group></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/group.xml"
-        targetptr="group"><code>&lt;group></code></olink> <code>id</code> attribute values within the enclosing  <olink
-          targetdoc="../elements/structural/file.xml" targetptr="file"
-          ><code>&lt;file></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+            ><code>group</code></olink> objects:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/group.xml" targetptr="group"><code>group</code></olink>
+        <code>id</code> property values within the enclosing <olink
+          targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>
+        object.</para>
     </listitem>
     
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/unit.xml"
-        targetptr="unit"><code>&lt;unit></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/unit.xml"
-        targetptr="unit"><code>&lt;unit></code></olink> <code>id</code> attribute values within the enclosing <olink
-          targetdoc="../elements/structural/file.xml" targetptr="file"
-          ><code>&lt;file></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"
+            ><code>unit</code></olink> objects:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+        <code>id</code> property values within the enclosing <olink
+          targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>
+        object.</para>
     </listitem>
     
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/note.xml"
-        targetptr="note"><code>&lt;note></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/note.xml"
-        targetptr="note"><code>&lt;note></code></olink> <code>id</code> attribute values within the immediate enclosing 
-        <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>&lt;file></code></olink>,
-        <olink targetdoc="../elements/structural/group.xml" targetptr="group"><code>&lt;group></code></olink>, or
-        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/note.xml" targetptr="note"
+            ><code>note</code></olink> objects:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/note.xml" targetptr="note"><code>note</code></olink>
+        <code>id</code> property values within the immediate enclosing <olink
+          targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>,
+          <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+          ><code>group</code></olink>, or <olink targetdoc="../elements/structural/unit.xml"
+          targetptr="unit"><code>unit</code></olink> object.</para>
     </listitem>
     
     <listitem>
-      <para>When used in <olink targetdoc="../elements/structural/data.xml"
-        targetptr="data"><code>&lt;data></code></olink> elements:</para>
-      <para>The value <glossterm>must</glossterm> be unique among all <olink targetdoc="../elements/structural/data.xml"
-        targetptr="data"><code>&lt;data></code></olink> <code>id</code> attribute values within the enclosing 
-        <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> element.</para>
+      <para>When used in <olink targetdoc="../elements/structural/data.xml" targetptr="data"
+            ><code>data</code></olink> objects:</para>
+      <para>The value <glossterm>must</glossterm> be unique among all <olink
+          targetdoc="../elements/structural/data.xml" targetptr="data"><code>data</code></olink>
+        <code>id</code> property values within the enclosing <olink
+          targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>unit</code></olink>
+        object.</para>
     </listitem>
     
     <listitem>
-      <para>When used in 
-        <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"><code>&lt;segment&gt;</code></olink>,
-        <olink targetdoc="../elements/structural/ignorable.xml" targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>&lt;mrk&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>&lt;sm&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>&lt;pc&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>&lt;sc&gt;</code></olink>,
-        <olink targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>&lt;ec&gt;</code></olink>,
-        or <olink targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>&lt;ph&gt;</code></olink> elements:</para>
+      <para>When used in <olink targetdoc="../elements/structural/segment.xml" targetptr="segment"
+            ><code>segment</code></olink>, <olink targetdoc="../elements/structural/ignorable.xml"
+          targetptr="ignorable"><code>ignorable</code></olink>, <olink
+          targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>mrk</code></olink>, <olink
+          targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>, <olink
+          targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>pc</code></olink>, <olink
+          targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+          targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, or <olink
+          targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>
+        objects:</para>
       <itemizedlist>
-        <listitem><para>The inline elements enclosed by a <olink targetdoc="../elements/structural/target.xml"
-      targetptr="target"><code>&lt;target></code></olink> element <glossterm>must</glossterm> use the duplicate <code>id</code> values
-      of their corresponding inline elements enclosed within the sibling <olink targetdoc="../elements/structural/source.xml"
-        targetptr="source"><code>&lt;source></code></olink> element if and only if those corresponding elements exist.</para></listitem>
-        <listitem><para>Except for the above exception, the value <glossterm>must</glossterm> be unique among all of the above within the
-          enclosing <olink targetdoc="../elements/structural/unit.xml" targetptr="unit"><code>&lt;unit></code></olink> 
-          element.</para></listitem>
+        <listitem><para>The inline objects enclosed by a <olink targetdoc="../elements/structural/target.xml"
+              targetptr="target"><code>&lt;target></code></olink> element
+              <glossterm>must</glossterm> use the duplicate <code>id</code> values of their
+            corresponding inline elements enclosed within the sibling <olink
+              targetdoc="../elements/structural/source.xml" targetptr="source"
+              ><code>source</code></olink> object if and only if those corresponding objects
+            exist.</para></listitem>
+        <listitem><para>Except for the above exception, the value <glossterm>must</glossterm> be unique among all of
+            the above within the enclosing <olink targetdoc="../elements/structural/unit.xml"
+              targetptr="unit"><code>unit</code></olink> object.</para></listitem>
       </itemizedlist>
     </listitem>
   </itemizedlist>
   <note><para>All of the above defined uniqueness scopes ignore <firstterm>Module</firstterm> and
         <firstterm>Extension</firstterm> data. It would be impossible to impose those uniqueness
-      requirements onto <firstterm>Module</firstterm> or <firstterm>Extension</firstterm> data. As
+      requirements onto <firstterm>Module</firstterm> or <firstterm>Extension</firstterm> data, as
         <firstterm>Core</firstterm> only <firstterm>Modifiers</firstterm> could inadvertently cause
       conflicts with <firstterm>Modules</firstterm> or <firstterm>Extensions</firstterm> based data
       they cannot access. <firstterm>Modules</firstterm> and <firstterm>Extensions</firstterm>
@@ -96,35 +107,20 @@
 
   <para><emphasis>Default value:</emphasis> undefined</para>
 
-  <para><emphasis>Used in:</emphasis> <olink
-  targetdoc="../elements/structural/file.xml"
-  targetptr="file"><code>&lt;file&gt;</code></olink>,
-    <olink
-      targetdoc="../elements/structural/group.xml"
-      targetptr="group"><code>&lt;group&gt;</code></olink>,
-    <olink
-  targetdoc="../elements/structural/unit.xml"
-  targetptr="unit"><code>&lt;unit&gt;</code></olink>,
-    <olink
-      targetdoc="../elements/structural/note.xml"
-      targetptr="note"><code>&lt;note&gt;</code></olink>,
-    <olink
-  targetdoc="../elements/structural/segment.xml"
-  targetptr="segment"><code>&lt;segment&gt;</code></olink>, <olink
-  targetdoc="../elements/structural/ignorable.xml"
-  targetptr="ignorable"><code>&lt;ignorable&gt;</code></olink>, <olink
-  targetdoc="../elements/structural/data.xml"
-  targetptr="data"><code>&lt;data&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/sc.xml"
-  targetptr="sc"><code>&lt;sc&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ec.xml"
-  targetptr="ec"><code>&lt;ec&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/ph.xml"
-  targetptr="ph"><code>&lt;ph&gt;</code></olink>, <olink
-  targetdoc="../elements/inline/pc.xml"
-  targetptr="pc"><code>&lt;pc&gt;</code></olink>, <olink
-    targetdoc="../elements/inline/mrk.xml"
-    targetptr="mrk"><code>&lt;mrk&gt;</code></olink> and <olink
-      targetdoc="../elements/inline/sm.xml"
-      targetptr="sm"><code>&lt;sm&gt;</code></olink>.</para>
+  <para><emphasis>Used in:</emphasis>
+    <olink targetdoc="../elements/structural/file.xml" targetptr="file"><code>file</code></olink>,
+      <olink targetdoc="../elements/structural/group.xml" targetptr="group"
+      ><code>group</code></olink>, <olink targetdoc="../elements/structural/unit.xml"
+      targetptr="unit"><code>unit</code></olink>, <olink targetdoc="../elements/structural/note.xml"
+      targetptr="note"><code>note</code></olink>, <olink
+      targetdoc="../elements/structural/segment.xml" targetptr="segment"
+      ><code>segment</code></olink>, <olink targetdoc="../elements/structural/ignorable.xml"
+      targetptr="ignorable"><code>ignorable</code></olink>, <olink
+      targetdoc="../elements/structural/data.xml" targetptr="data"><code>data</code></olink>, <olink
+      targetdoc="../elements/inline/sc.xml" targetptr="sc"><code>sc</code></olink>, <olink
+      targetdoc="../elements/inline/ec.xml" targetptr="ec"><code>ec</code></olink>, <olink
+      targetdoc="../elements/inline/ph.xml" targetptr="ph"><code>ph</code></olink>, <olink
+      targetdoc="../elements/inline/pc.xml" targetptr="pc"><code>pc</code></olink>, <olink
+      targetdoc="../elements/inline/mrk.xml" targetptr="mrk"><code>mrk</code></olink> and <olink
+      targetdoc="../elements/inline/sm.xml" targetptr="sm"><code>sm</code></olink>.</para>
 </section>

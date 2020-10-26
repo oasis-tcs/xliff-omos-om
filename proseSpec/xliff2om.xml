@@ -884,8 +884,8 @@
         <listitem>
           <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>LIOM
               Instance</firstterm> that contains only objects and properties from namespaces that
-            correspond to <firstterm>XLIFF-defined</firstterm> elements and attributes that it
-            cannot handle <glossterm>must</glossterm> preserve those objects and properties.</para>
+            correspond to <firstterm>XLIFF-defined</firstterm> obejcts and properties that it cannot
+            handle <glossterm>must</glossterm> preserve those objects and properties.</para>
         </listitem>
         <listitem>
           <para>An <firstterm>Agent</firstterm> processing a valid <firstterm>LIOM

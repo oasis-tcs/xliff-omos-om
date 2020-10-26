@@ -9,7 +9,7 @@
     <title>(ignorable) sub-unit with the <code>segment</code> flag set to <code>no</code></title>
     <para>Part of the extracted content that is not included in a segment (and therefore not
         translatable). For example tools can use <code>(ignorable)</code> to store the white space
-        and/or codes that are between two segments.</para>
+        or codes that are between two segments.</para>
     <para><emphasis>Contains:</emphasis></para>
     <simplelist>
         <member>- One <olink targetdoc="source.xml" targetptr="source"><code>source</code></olink>

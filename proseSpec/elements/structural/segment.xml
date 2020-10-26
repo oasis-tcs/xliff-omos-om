@@ -23,7 +23,7 @@
         ><code>target</code></olink> object</member>
   </simplelist>
 
-  <para><emphasis>Attributes:</emphasis></para>
+  <para><emphasis>Properties:</emphasis></para>
 
   <simplelist>
     <!-- This flag got killed in the August 20 2013 meeting <member>- <olink targetdoc="../../attributes/approved.xml"
