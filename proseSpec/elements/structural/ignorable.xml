@@ -18,7 +18,7 @@
                 ><code>target</code></olink> element</member>
     </simplelist>
     
-    <para><emphasis>Attributes:</emphasis></para>
+    <para><emphasis>Properties:</emphasis></para>
     <simplelist>
         <member>- <olink targetdoc="../../attributes/id.xml" targetptr="id"><code>id</code></olink>, <glossterm>optional</glossterm></member>
     </simplelist>
