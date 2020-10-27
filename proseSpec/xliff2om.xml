@@ -691,7 +691,7 @@
     </section>
 
     <section>
-      <title>Normative References</title>
+      <title id="normRef">Normative References</title>
 
       <!--note that at least one paragraph (and it can be empty) is needed to satisfy the DocBook document model-->
 
